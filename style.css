@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* navigation bar------------------------------------------------------- */
+
+.header {
+  width: 100%;
+  height: 10%;
+}
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 55px;
+}
+.logo {
+  font-family: "Poppins";
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* todo main area------------------------------------------------------- */
+
+.todo {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* cockpit------------------------------------------------------- */
+
+.cockpit {
+  width: 580px;
+  padding: 30px 0px;
+}
+
+/* title------------------------------------------------------- */
+
+.title {
+  width: 100%;
+  display: flex;
+}
+.title > input {
+  width: 90%;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 32px;
+  outline: none;
+  border: none;
+  color: rgb(122, 88, 88);
+}
+.title > input::placeholder {
+  color: #929292;
+}
+.title > span {
+  width: 10%;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 600;
+  color: #786868;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* task input fields------------------------------------------------------- */
+
+.task-input {
+  width: 100%;
+  border-radius: 15px;
+  background-color: #f2eee2;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 5px;
+}
+.list-input {
+  width: 75%;
+}
+.list-input > input {
+  outline: none;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 8px 15px;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(34, 7, 7);
+}
+.list-input > input::placeholder {
+  color: #a7a7a7;
+}
+
+/* container------------------------------------------------------- */
+
+.container {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* select priority input------------------------------------------------------- */
+
+.priority-input {
+  width: 70%;
+}
+select {
+  background-color: #786868;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+select > option {
+  background-color: #786868;
+  color: white;
+}
+
+/* add button------------------------------------------------------- */
+
+.add-button {
+  background-color: green;
+  margin: 0px 0px 0px 5px;
+  border-radius: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-button:hover {
+  background-color: rgb(0, 58, 0);
+  cursor: pointer;
+}
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add > .material-icons {
+  font-size: 25px;
+  color: white;
+}
+
+/* todo list------------------------------------------------------- */
+
+.list {
+  height: 300px;
+  width: 580px;
+  overflow-y: scroll;
+}
+.list::-webkit-scrollbar {
+  width: 3px;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #a0a0a0;
+}
+
+/* list item------------------------------------------------------- */
+.list-item {
+  width: 97%;
+  height: 54px;
+  background-color: #efefef;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin: 7px 15px 7px 0px;
+}
+
+/* checkbox------------------------------------------------------- */
+.checkbox {
+  border-radius: 5px 0px 0px 5px;
+  width: 13%;
+  height: 100%;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox input {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  box-shadow: none;
+  appearance: none;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.checkbox input:checked {
+  background-color: rgb(36, 36, 36);
+  position: relative;
+}
+.checkbox input:checked::after {
+  content: "heelo";
+  color: red;
+  content: "";
+  position: absolute;
+  left: 3.5px;
+  top: 6.5px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 1px 0 0 white, 3px 0 0 white, 3px -1px 0 white, 3px -3px 0 white,
+    3px -5px 0 white, 3px -7px 0 white;
+  transform: rotate(45deg);
+}
+
+.high > .checkbox {
+  background-color: red;
+}
+.medium > .checkbox {
+  background-color: #ffbf00;
+}
+.low > .checkbox {
+  background-color: green;
+}
+
+/* item name------------------------------------------------------- */
+.item-name {
+  padding: 10px;
+  font-family: "Poppins";
+  font-weight: 500;
+  width: 75%;
+}
+.item-done {
+  text-decoration: line-through;
+  color: #555555;
+}
+
+/* delete icon------------------------------------------------------- */
+.item-delete {
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+.item-delete:hover {
+  background-color: #d8d8d8;
+}
+.delete {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* buttons------------------------------------------------------- */
+
+.buttons {
+  margin: 30px 0px;
+  display: flex;
+  width: 580px;
+  justify-content: space-between;
+}
+.buttons > .button {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 90px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+}
+.selected {
+  background-color: #210505;
+  color: #e3e3e3;
+}
+.unselected {
+  background-color: #e3e3e3;
+  color: #210505;
+}
+
+@media (max-width: 650px) {
+  /* navigation bar------------------------------------------------------- */
+
+  .nav {
+    padding: 20px 15px;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  /* todo main area------------------------------------------------------- */
+
+  .todo {
+    padding: 15px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* cockpit------------------------------------------------------- */
+
+  .cockpit {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  /* title------------------------------------------------------- */
+
+  .title > input {
+    width: 85%;
+    font-size: 28px;
+  }
+  .title > span {
+    width: 15%;
+    font-size: 20px;
+  }
+
+  /* task input fields------------------------------------------------------- */
+
+  .task-input {
+    width: 100%;
+    border-radius: 0px;
+    background-color: transparent;
+    margin-top: 10px;
+    display: block;
+    padding: 0px;
+  }
+  .list-input {
+    width: 100%;
+  }
+  .list-input > input {
+    background-color: #f2eee2;
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  /* container------------------------------------------------------- */
+
+  .container {
+    margin: 5px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  /* select priority input------------------------------------------------------- */
+
+  .priority-input {
+    width: 30%;
+  }
+  select {
+    border-radius: 40px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* add button------------------------------------------------------- */
+
+  .add-button {
+    margin: 0px;
+    border-radius: 40px;
+    width: 15%;
+  }
+  .add > .material-icons {
+    font-size: 22px;
+  }
+
+  /* todo list------------------------------------------------------- */
+
+  .list {
+    width: 100%;
+  }
+
+  /* list item------------------------------------------------------- */
+  .list-item {
+    width: 97%;
+    height: 45px;
+  }
+
+  /* checkbox------------------------------------------------------- */
+  .checkbox {
+    border-radius: 5px 0px 0px 5px;
+    width: 15%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkbox input {
+    width: 14px;
+    height: 14px;
+  }
+  .checkbox input:checked::after {
+    left: 3px;
+    top: 6px;
+    box-shadow: 0.5px 0 0 white, 2.5px 0 0 white, 2.5px -0.5px 0 white,
+      2.5px -2.5px 0 white, 2.5px -4.5px 0 white, 2.5px -6.5px 0 white;
+  }
+
+  /* item name------------------------------------------------------- */
+  .item-name {
+    font-size: 13px;
+  }
+
+  /* delete icon------------------------------------------------------- */
+  .item-delete {
+    width: 15%;
+  }
+
+  /* buttons------------------------------------------------------- */
+
+  .buttons {
+    width: 100%;
+  }
+  .buttons > .button {
+    border-radius: 0px;
+    height: 40px;
+    width: 25%;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .unselected {
+    color: #858585;
+  }
+}

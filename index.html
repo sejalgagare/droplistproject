@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TO : DO</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="logo">TO : DO</div>
+      </div>
+    </div>
+    <div class="todo">
+      <div class="cockpit">
+        <div class="title">
+          <input id="title" type="text" name="title" placeholder="Untitled" />
+          <span>0</span>
+        </div>
+        <div class="task-input">
+          <div class="list-input">
+            <input
+              type="text"
+              name="list-input"
+              id="list-input"
+              placeholder="Add a Task..."
+            />
+          </div>
+          <div class="container">
+            <div class="priority-input">
+              <select name="priority" id="priority">
+                <option value="high">
+                  <div class="high-name">High</div>
+                </option>
+                <option value="medium">
+                  <div class="mwdium-name">Medium</div>
+                </option>
+                <option value="low">
+                  <div class="low-name">Low</div>
+                </option>
+              </select>
+            </div>
+            <div class="add-button">
+              <div class="add"><span class="material-icons">add</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list"></div>
+      <div class="buttons">
+        <div class="all button selected">All</div>
+        <div class="high button unselected">High</div>
+        <div class="medium button unselected">Medium</div>
+        <div class="low button unselected">Low</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
